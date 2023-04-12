@@ -7,6 +7,7 @@ const span = document.getElementById("score");
 let number = "";
 ratings.forEach((rating) => {
   rating.addEventListener("click", (e) => {
+    rating.classList.replace("bg-gray-500", "bg-neutral-100");
     number = e.target.innerText;
     span.innerText = number;
   });
