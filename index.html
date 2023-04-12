@@ -34,7 +34,8 @@
   <body class="bg-gray-900 flex justify-center items-center">
     <!-- Rating state start -->
     <div
-      class="flex flex-col bg-gray-600 rounded-xl m-6 p-8 space-y-5 my-72 w-96"
+      id="rating-modal"
+      class="flex flex-col bg-gray-600 rounded-xl m-6 p-8 space-y-5 my-72 w-96 h-98"
     >
       <span class=""
         ><i
@@ -50,27 +51,33 @@
       <div class="flex justify-between">
         <button
           class="bg-gray-500 w-12 h-12 rounded-full hover:bg-orange-500 active:bg-neutral-100"
+          value="1"
         >
           1</button
         ><button
           class="bg-gray-500 w-12 h-12 rounded-full hover:bg-orange-500 active:bg-neutral-100"
+          value="2"
         >
           2</button
         ><button
           class="bg-gray-500 w-12 h-12 rounded-full hover:bg-orange-500 active:bg-neutral-100"
+          value="3"
         >
           3</button
         ><button
           class="bg-gray-500 w-12 h-12 rounded-full hover:bg-orange-500 active:bg-neutral-100"
+          value="4"
         >
           4</button
         ><button
           class="bg-gray-500 w-12 h-12 rounded-full hover:bg-orange-500 active:bg-neutral-100"
+          value="5"
         >
           5
         </button>
       </div>
       <button
+        id="submit-button"
         class="bg-orange-500 hover:bg-neutral-100 text-white hover:text-black font-bold py-2 px-4 rounded-full"
       >
         SUBMIT
@@ -80,12 +87,24 @@
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-
-    <!-- You selected -->
-    <!-- Add rating here -->
-    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch! -->
-
+    <div
+      id="thank-you-modal"
+      class="flex justify-center hidden items-center flex-col bg-gray-600 rounded-xl m-6 p-8 space-y-5 my-72 w-96"
+      style=""
+    >
+      <img src="./images/illustration-thank-you.svg" alt="" class="w-40" />
+      <p class="bg-gray-500 rounded-full px-4">
+        You selected
+        <!-- Add rating here -->
+        <span id="score"></span>
+        out of 5
+      </p>
+      <h2 class="text-2xl text-white font-bold">Thank you!</h2>
+      <p class="text-center text-neutral-400">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+    </div>
     <!-- Thank you state end -->
   </body>
 </html>
